@@ -1,0 +1,216 @@
+Bash Commands
+Touch: The easiest way to create new empty files
+Man: Displays the user manual of any command that runs from the terminal providing information about the command
+Apropos: Helps you seach through man with keywords to find the command you want
+pwd: prints out the entire working directory
+ls: lists files and directories within a directory
+cd: allows you to change directories
+less: displays file contents one page at a time in the terminal
+mkdir: makes a new directory
+rmdir: removes a directory
+mv: moves files from one place to  another
+cp: copy for directories or files
+alias: the shortcut to different commands (creates shortcut)
+unalias: removes aliases created during the current session
+clear: clears the page
+wq: after escape it follows a colon and saves and exits
+
+~/. bashrc: starting with shells and the configuration
+Interrogating Files
+find: It can do a lot but our main use for it is finding paths to files
+wc: returns the word count line count and character count
+stat: Shows you the status of a file or a file system
+df: (disk free) shows infromation related to storage and free space
+
+File Sharing
+wget: Downloads files from the server and it can work in the background
+tar: tarball files
+
+I/O Manipulation
+
+SYNTAX
+echo: writes arguments to standard output and edits variables within the shell
+export: can move functions and variables into a current shell
+
+tar syntax
+tar -xvf
+
+Find syntax
+find file
+
+Stat syntax
+stat [option]... FILE...
+
+wget syntax
+wget http://website.com/files/file.txt
+
+Echo Syntax
+RED="rose"
+Echo "The $RED is red" > red.txt
+Echo {a..g}
+
+Export Syntax
+export -f functionname #
+
+
+Simple commands syntax
+cd ..
+
+ls/long/path {bar,foo} : shows them
+rm/long/path {bar,foo} : removes them
+
+Text Editors
+:q exit without saving
+:wq exit with saving
+:w save 
+control shift c and control shift v
+
+Terminal Basics
+an absolute path is the path using / and stuff
+a relative path is within the current pwd
+~ is the home working directory ~+ is the current directory and ~- is the previous
+environment and internal shell variables are in all caps
+
+Command to be familiar with
+ls -a lists every file
+ls -1 turns it into a long listing format
+cp -r recursively copies directories
+wc is wordcount and the minuses are self explanatory
+rm -r forcible removes it even if it isnt empty
+-e and -a see if files exist but -e is unary and -a is binary
+mkdir -p creates a directory tree
+tar -xvf is to extract and tar -cvf is to create
+mv moves or renames file directories
+cat allows creation and viewing of multiple files
+touch creates new empty files and can create a new timestamp
+
+Variables
+single quotes wont call variables and double quotes does
+curly braces help exapnd a variable in a string
+echoing an unset variable returns an empty string
+
+Wildcards
+* can seperate a string into individual words
+/ to search forward and ? to search backwards
+[] can access filenames
+
+Basic Bash Scripting
+$num passes arguments to the command line
+bash scripts can execute a shell command, run multiple commands, customize tasks, perform task automation
+while [condition]
+do
+ 1
+ 2
+ 3
+done
+
+I/O manipulation redirection
+> standard output
+> standard input
+>> append out
+<< append in
+2>> standard error
+
+Misc
+exit status is an integer
+if it is 0 its successful with no errors
+nonzero means command line failure
+$ is the beginning of every bash command
+control c is for cleanup in functions
+control d is the eof and says user is done with input and can exit
+
+input syntax
+echo "Hello World!" > new.txt
+>> appends it
+| is a pipeline that sends the output from the left to the right
+standard input 1 standard output 2 STDERR
+$ is useed to expand a variable
+Shell = /bin/bash
+Home = /u/eu/dl/keeganbean
+* matches zero or more characters
+? matches exactly one character
+[Ke] matches exactly one character of the set K, e
+{xyz,abc} substrings
+{xyz,abc,} adds an empty substring
+Dessert/Pie/Cobbler tree accessing stuff
+
+process control
+The top command displays processor activity of your Linux box and also displays tasks managed by
+the kernel in real-time. It shows processor and memory usage and other information like running
+processes
+The pgrep command is a quick way of getting the PID of a process
+kill command is self explanatory (pkill works on a process)
+killall will kill every instance of a process
+To run a program with a certain nice value, we can use the nice command:
+nice -n 15 firefox
+
+h - Show the current version
+c - This toggles the command column between showing command and program name
+d - Specify the delay time between refreshing the screen
+o - Sorts by the named field
+p - Only show processes with specified process IDs
+u - Show only processes by the specified user
+
+you can use true and false in if statements like booleans in C++
+test # test or [ ] will take operators and operands as operators
+if test "X" = "X"  ; then
+
+case "$KEY" in
+  [A-Z]   ) echo "Uppercase letter";;
+  [a-z]   ) echo "Lowercase letter";;
+  [0-9]   ) echo "Digit";;
+  *       ) echo "Other";;
+esac 
+
+for
+	do
+		echo
+done
+
+
+common pipeline utilities
+grep searches the named input FILEs
+head makes it easy to output the first part of files
+tail outputs the last lines of files
+sort sorts the contents of a file line by line.
+tee reads from standard input and writes to standard output and to files at the same time.
+tr automatically translates (substitutes, or maps) one set of characters to another
+
+sed(stream editing)
+sed [options] commands [file-to-edit]
+echo day | sed s/day/night/
+
+permissions
+chmod is used to change the permissions of files or directories
+chown changes the owner and group
+id prints user and group information for the specified USERNAME
+users prints the names of all users currently logged in to the host
+who is similar
+newgrp allows a user to log in to a new group
+chgrp changes group ownership of a file or files
+groupadd creates a new group
+groupdel is used by a superuser or root to remove a group.
+gpasswd administers groups
+sg executes commands as a different group ID. 
+su (substitute user) changes the current user ID to that of the superuser or another user
+
+LiteLifting notes
+#NOTES
+#use sed to display a certain word
+#remove the initial newline 
+#arranged to do jobs in order
+#alnum for character class
+#new syntax to reveal a specific word
+
+TitleCheck notes
+#NOTES
+#changed it so it didnt just exit for numbers
+#removed if statements
+#narrowed down to one case and esac
+#set LC Collate
+
+Inodes and linking
+Inodes: An inode (index node) is a data structure on a traditional Unix-style file system. It stores basic information about a file, directory, or other file system object
+Hard Links: With hard links, it is possible to associate multiple filesystem entities with a single inode. 
+Soft Links: Instead of linking to an inode, soft links refer to another link
+

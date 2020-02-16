@@ -1,0 +1,62 @@
+Bash Commands
+Touch: The easiest way to create new empty files
+Man: Displays the user manual of any command that runs from the terminal providing information about the command
+Apropos: Helps you seach through man with keywords to find the command you want
+pwd: prints out the entire working directory
+ls: lists files and directories within a directory
+cd: allows you to change directories
+less: displays file contents one page at a time in the terminal
+mkdir: makes a new directory
+rmdir: removes a directory
+mv: moves files from one place to  another
+cp: copy for directories or files
+alias: the shortcut to different commands (creates shortcut)
+unalias: removes aliases created during the current session
+clear: clears the page
+wq: after escape it follows a colon and saves and exits
+
+~/. bashrc: starting with shells and the configuration
+Interrogating Files
+find: It can do a lot but our main use for it is finding paths to files
+wc: returns the word count line count and character count
+stat: Shows you the status of a file or a file system
+df: (disk free) shows infromation related to storage and free space
+
+File Sharing
+wget: Downloads files from the server and it can work in the background
+tar: tarball files
+
+I/O Manipulation
+
+SYNTAX
+echo: writes arguments to standard output and edits variables within the shell
+export: can move functions and variables into a current shell
+
+tar syntax
+tar -xvf
+
+Find syntax
+find file
+
+Stat syntax
+stat [option]... FILE...
+
+wget syntax
+wget http://website.com/files/file.txt
+
+Echo Syntax
+RED="rose"
+Echo "The $RED is red" > red.txt
+Echo {a..g}
+
+Export Syntax
+export -f functionname #
+
+
+Simple commands syntax
+cd ..
+
+ls/long/path {bar,foo} : shows them
+rm/long/path {bar,foo} : removes them
+
+
